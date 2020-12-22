@@ -1,0 +1,64 @@
+
+
+
+.accordion__section {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+.accordion {
+  background-color:#2355FC0F;
+  color: #444;
+  cursor: pointer;
+  align-items: center;
+  border: none;
+  outline: none;
+  /* transition: background-color 0.6s ease-in; */
+  height: 26px;
+  justify-content: center;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:hover,
+.active {
+  background-color: #2355FC0F;
+  height:26px;
+}
+
+/* Style the accordion content title */
+.accordion__title {
+ 
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display:inline-block;
+  color: #194DFF;
+  font-family:'Nunito';
+}
+
+
+
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+
+.accordion__content {
+  background-color: white;
+  overflow: auto;
+  transition: max-height 0.6s ease;
+  vertical-align: middle;
+}
+
+
+.accordion__text {
+  font-family: "Nunito";
+  font-size: 12px;
+  padding: 18px;
+  color: #0A2239;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}

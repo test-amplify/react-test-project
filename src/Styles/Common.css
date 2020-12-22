@@ -1,0 +1,406 @@
+.commonImgStyle{
+
+}
+
+
+  .mainHeading p {
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+    margin-top: 30px;
+    color: #0A2239;
+    font-weight: bold;
+    font-family:'Nunito';
+  }
+  
+  .mainHeading p:after {
+    content: "";
+    height: 4px;
+    width: 50%;
+    background-color: #3054D6;
+    position: absolute;
+    bottom: -.5em;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .mainDiv{
+    text-align:center;
+    justify-content: center;
+  }
+
+  .card {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: #0A22391F;
+    border-width: 2px;
+    box-shadow:0px 3px 6px  #90909066;
+  }
+  .cardHeader{
+   height: 82px; 
+   background-color: #202942;
+   width: 100%; 
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+  }
+  .cardBody{  
+    width: 100%;  
+   }
+  .cardFText{
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 18px;
+
+    font-weight: bold;
+    font-family:'Nunito';
+  }
+  .cardSecText{
+    color: #8492A6;
+    font-family:'Nunito';
+    font-size: 13px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+  }
+
+  .cardContent{
+    display: flex;
+  }
+  .cardsubContent{
+    display: table-column;
+    text-align-last: left;
+  }
+  .userName{
+    color: #0A2239;
+    font-family:'Nunito';
+    font-size: 15px;
+    margin-left: 12px;
+    margin-top: 24px;
+    font-weight: bold;
+    height: 10px;
+  }
+  .userLoc{
+    color: #8492A6;
+    font-family:'Nunito';
+    font-size: 13px;
+    margin-left: 12px;
+    margin-bottom: 24px;
+    height: 10px;
+  }
+  .specification{
+    font-size: 15px;
+    font-weight: bold;
+    font-family:'Nunito';
+    margin-left: 19.59px;
+    color: #0A2239;
+    margin-top:20px;
+  }
+  .specification02{
+    font-size: 15px;
+    font-weight: bold;
+    font-family:'Nunito';
+    margin-left: 13.23px;
+    margin-top: 13px;
+    color: #0A2239;
+  }
+  .specification03{
+    font-size: 15px;
+    font-weight: bold;
+    font-family:'Nunito';
+    margin-left: 19.59px;
+    margin-top: 10px;
+    color: #0A2239;
+  }
+
+  .mainSecCardHeading p {
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #0A2239;
+    font-weight: bold;
+    font-family:'Nunito';
+  }
+  
+  .mainSecCardHeading p:after {
+    content: "";
+    height: 4px;
+    width: 50%;
+    background-color: #3054D6;
+    position: absolute;
+    bottom: -.5em;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .bid-input{
+    max-width: 100%;
+   height:69px;
+   border: none; 
+   font-size: 50px;
+   color: #0D2D11;
+   align-content: center;
+   width: fit-content;
+   outline: none;
+  }
+  .PriceTxtNew{
+    border-color: #3054D6;
+    background-color:#F6F9FB80;
+    color: #0A2239;
+  }
+  .PriceTxt{
+    border-color: #E7EBEE;
+    background-color:#F6F9FB80;
+    color: #0A2239;
+  }
+  .priceTextOpacity{
+    color: #3054D6;
+    opacity:100%;
+  }
+  .priceTextOpa{
+    color: #0A2239;
+    opacity:60%;
+  }
+  .fixedPrice{
+    height:35px;
+    width:94px;    
+    border-width: 1px;    
+    border-radius: 100px 100px 100px 100px;
+    font-size: 13px; 
+    outline: none;
+    margin-right: 6px;
+    margin-bottom: 26px;
+  }
+  .Negiotable{
+    height:35px;
+    width:127px;  
+    border-width: 1px; 
+    border-radius: 100px 100px 100px 100px;
+    font-size: 13px;
+    outline: none;
+    margin-left: 6px;
+    margin-bottom: 26px;
+  }
+  .BidNowbutton {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    height:52px;
+    padding-left: 21px;
+    padding-right: 21px;
+    opacity: 0px;
+    margin-top: 14px;
+    width: 90%;
+    margin-bottom: 26px;
+  }
+  .BidNowbuttonText{
+    font-weight: bold;
+    font-family:'Nunito';
+    opacity: 30%; 
+    color: #2355FC ;
+    font-size: 16px; 
+  }
+  .BidNowbuttonText1{
+    font-weight: bold;
+    font-family:'Nunito';
+    opacity: 100%; 
+    color: #FFFFFF;
+    font-size: 16px; 
+  }
+  @media only screen and (min-width: 768px) {
+    .BidNowbutton {
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      height:52px;
+      padding-left: 21px;
+      padding-right: 21px;
+      opacity: 0px;
+      margin-top: 14px;
+      width: 30%;
+      margin-bottom: 26px;
+    }
+    .InputCommonSt{
+      height:40px;
+      width:30%;
+      background-color: #FFFFFF;
+      border: 1px solid #E7EBEEB3;
+      border-radius: 4px;
+      box-sizing: border-box;
+      border-width: 1px;
+      color: #0D0D0F;
+      outline: none;
+      margin-bottom: 28px;
+      margin-top: 28px;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .BidNowbutton {
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      height:52px;
+      padding-left: 21px;
+      padding-right: 21px;
+      opacity: 0px;
+      margin-top: 14px;
+      width: 50%;
+      margin-bottom: 26px;
+    }
+    .InputCommonSt{
+      height:40px;
+      width:30%;
+      background-color: #FFFFFF;
+      border: 1px solid #E7EBEEB3;
+      border-radius: 4px;
+      box-sizing: border-box;
+      border-width: 1px;
+      color: #0D0D0F;
+      outline: none;
+      margin-bottom: 28px;
+      margin-top: 28px;
+      margin-bottom: 26px;
+    }
+  }
+  /* Thick red border */
+hr.new4 {
+  border-color: #0A22391F;
+    border-width: 1px; 
+  width: 99.8%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.InputCommonSt{
+  height:40px;
+  width:90%;
+  background-color: #FFFFFF;
+      border: 1px solid #E7EBEEB3;
+      border-radius: 4px;
+      box-sizing: border-box;
+      border-width: 1px;
+      color: #0D0D0F;
+      outline: none;
+      margin-bottom: 28px;
+      margin-top: 28px;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+  .form-area{
+    margin: 30px auto;
+    max-width: 450px;
+    padding: 10px 30px;
+    background-color: #fafafa;
+  }
+  .form-area .single-form{
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .form-area .single-form .nameinput {
+    width: 100%;
+    padding: 10px;
+  }
+  .form-area .single-form .nameinput :focus + .labell,
+  .form-area .single-form .nameinput :valid + .labell{
+color: black;
+font-size: 10px;
+font-weight: bold;
+top:-10px
+  }
+  .form-area .single-form .nameinput :focus + .labell :after ,
+  .form-area .single-form .nameinput :valid + .labell :after {
+content: ':';
+  }
+
+  .container{
+    max-width: 700px;
+  
+  }
+  .formfield{
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    margin: auto;
+    padding: 0px;
+    border: 0px;
+    font-size: 1em;
+  }
+  .formfield *{
+    box-sizing: border-box;
+  }
+  
+  #mobilefield{
+    width: 86%;   
+    margin-right: 40px;
+  }
+  #namefield{
+    width: 86%;   
+    margin-right: 40px;
+  }
+  #remarksfield{
+    width: 86%;   
+    margin-right: 40px;
+  }
+  .formfield>input, .formfield>label{
+    padding: 0.8em;
+    margin: 0.9em;
+    width: 100%;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 14px;
+    font-family: 'Nunito';
+  }
+  
+  .formfield>input{
+    border: 1px solid #E7EBEEB3;
+    border-radius: 1px;
+    outline: none;
+    border-radius: 4px;
+    height:44px
+  }
+  .formfield>input:focus{
+    border: 1px solid #3054D6;;
+    border-radius: 1px;
+    outline: none;
+    border-radius: 4px;
+    height:44px
+  }
+
+  .formfield>label{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    color: #ccc;
+  }
+  input:focus + label, input:valid + label{
+    color: #3054D6;
+    font-size: 0.8em;
+    width: auto;
+    height: 1.3em;
+    padding: 0px 0.5em 0px 0.5em;
+    margin: 0px;
+    /*outline: 1px solid red; /*for debugigng purposes only*/
+    background: white;
+    transition: 0.2s ease-in-out;
+    top: 0em;
+    left: 2em;
+  }
+  
+  
