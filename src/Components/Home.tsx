@@ -13,17 +13,17 @@ interface Props {
   }
 
 const HomePage = ({  }:Props): JSX.Element => {
-    const [text, setTxt] = useState<number>(50);
-    const [bidValue, setbidValue] = useState<number| undefined>();
+  
+    const [bidValue, setbidValue] = useState<string| null>();
     const [priceSelection, setpriceSelection] = useState<string>();
     const [mobile, setmobile] = useState<string>();
     const [name, setname] = useState<string>();
     const [remarks, setremarks] = useState<string>();
-    const handleKeyPress = (event:any) => { 
-    if(bidValue!==undefined){
-        
-       }    
-      }
+    const [FormVisible, setFormVisible] = useState<boolean>(false);
+    
+      
+      
+     
   return (
    <div className='mainDiv'>
      
@@ -32,40 +32,40 @@ const HomePage = ({  }:Props): JSX.Element => {
    </div>
    <div  className='card'>
     <div className='cardHeader'>
-    <p className='cardFText'>Honda City</p>
-    <p className='cardSecText'>Posted at 1 Nov.9:30 AM</p>
+    <div className='cardFText'>Honda City</div>
+    <div className='cardSecText'>Posted at 1 Nov.9:30 AM</div>
     </div>
     <div className='cardBody'>
     <div className='cardContent'>
   <Image path={Group5945} imageStyle={Group5945Image} />
-  <p className='specification'>Specification 01</p>
+  <div className='specification'>Specification 01</div>
     </div>
     <div className='cardContent'>
   <Image path={Path25988} imageStyle={Path25988Image} />
-  <p className='specification02'>Specification 02</p>
+  <div className='specification02'>Specification 02</div>
     </div>
     <div className='cardContent'>
   <Image path={payment} imageStyle={paymentImage} />
-  <p className='specification03'>Specification 03</p>
+  <div className='specification03'>Specification 03</div>
     </div>
     <Accordion  contents={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."} />  
     <div className='cardContent'>
   <Image path={ProfileTop} imageStyle={ProfileTopcardImage} />
   <div className='cardsubContent'>
-  <p className='userName'>Rohan Sharma</p>
-  <p className='userLoc'>Bengaluru, Karnataka</p>
+  <div className='userName'>Rohan Sharma</div>
+  <div className='userLoc'>Bengaluru, Karnataka</div>
   </div>
     </div>
     </div>
     </div> 
     <div  className='card'>
     <div className="mainSecCardHeading">
-   <p>Place Your Load BID</p>
+   <p>Place Your BID</p>
    </div> 
    <div className='cardContent'>
    <Image path={money} imageStyle={moneycardImage} />
-          <input
-             style={{width:text}}
+          {/* <input
+             style={{width:width}}
               className='bid-input'
               name='bid'
               type='number'
@@ -74,13 +74,19 @@ const HomePage = ({  }:Props): JSX.Element => {
               value={bidValue}
               onKeyPress={handleKeyPress} 
               onChange={(data:any)=>{
-                setbidValue(data.target.value) 
+                setbidValue(data.target.value);
                 var stgValue=data.target.value.length.toString();
-                var myText=((stgValue.length + 2) * 60);
-                setTxt(myText) 
+                var myText=((stgValue.length + 1) * 65);
+                width=myText;
+                setTxt(myText); 
                 }  
               }            
-            />
+            /> */}
+
+    <span contentEditable="true" placeholder="0"
+    onInput={e =>  setbidValue(e.currentTarget.textContent)} 
+    className='editobleTxt'></span>
+
     </div>
     <div className='cardContent'>
     <button className={priceSelection ==='fixedPrice' ? "fixedPrice PriceTxtNew" :"fixedPrice PriceTxt" }  onClick={() => setpriceSelection('fixedPrice')}>
@@ -94,16 +100,19 @@ const HomePage = ({  }:Props): JSX.Element => {
  </div>
     </button>
     </div>
-    {priceSelection ==='fixedPrice' ? <hr className="new4"/> :null} 
+    {FormVisible ? <hr className="new4"/> :null} 
     
-    {priceSelection ==='fixedPrice' ? <>
+    {FormVisible ? <>
+      <div className="FormGroup">
     <div className="formfield" id="mobilefield">
                 <input type="text" 
                 value={mobile}
-                onChange={(data:any)=>{setmobile(data.target.value)}} id="mobile" required/>
-                {/* <span style={{marginLeft:-3,marginRight:10,color:'blue',fontSize:18}}>+44</span> */}
+                onChange={(data:any)=>{
+                    setmobile(data.target.value)}} id="mobile" required/>
+                {/* <span style={{marginLeft:-3,marginRight:10,color:'blue',fontSize:18}}>+91</span> */}
 				<label htmlFor="mobile" placeholder="mobile">Enter Your Mobile number*</label>
-			</div>	
+			</div>
+     
             <div className="formfield" id="namefield">
                 <input type="text" 
                 value={name}
@@ -118,13 +127,15 @@ const HomePage = ({  }:Props): JSX.Element => {
                 id="remarks" required/>
 				<label htmlFor="remarks" placeholder="remarks">Enter Remarks (optional)</label>
 			</div>	
+      </div>	
       </>:null}
     </div>
     
-    <button className="BidNowbutton" style={name && mobile ?{background:'#3054D6'}:{background:'#EDF0F7'}} disabled={bidValue ? false :true} onClick={() => {
-        console.log("Details",mobile,name,remarks)
+    <button className="BidNowbutton" style={bidValue ?{background:'#3054D6'}:{background:'#EDF0F7'}} disabled={bidValue ? false :true} onClick={() => {
+        console.log("Details",mobile,name,remarks,bidValue)
+        setFormVisible(true);
     }}>
-    <div className={name && mobile ? "BidNowbuttonText1" : "BidNowbuttonText"} >Bid Now</div>
+    <div className={bidValue ? "BidNowbuttonText1" : "BidNowbuttonText"} >Bid Now</div>
     </button>
     </div>
     

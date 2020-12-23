@@ -14,12 +14,13 @@
   align-items: center;
   border: none;
   outline: none;
+  display: flex;
   /* transition: background-color 0.6s ease-in; */
   height: 26px;
   justify-content: center;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
 .accordion:hover,
 .active {
   background-color: #2355FC0F;
@@ -35,6 +36,7 @@
   display:inline-block;
   color: #194DFF;
   font-family:'Nunito';
+  margin-right: 11px;
 }
 
 

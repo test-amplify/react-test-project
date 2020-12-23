@@ -1,14 +1,11 @@
 import React, { useState ,useRef} from 'react';
 import "../Styles/Accordion.css";
-import Chevron from "../Components/Chevron";
 import Hide from '../Assets/Hide.svg';
 import More from '../Assets/More.svg';
 import Image from '../Components/Image';
 import {MoreImage,HideImage} from  '../Styles/Commonstyle'
 interface Props {
     contents:string;
-//   onClick: Function;
-//   buttonStyle: React.CSSProperties;
 }
 
 const Accordion = ({contents }: Props): JSX.Element => {
@@ -25,19 +22,18 @@ const Accordion = ({contents }: Props): JSX.Element => {
       setActive === "active" ? "0px" : content.current !== null ? `${content.current.scrollHeight}px`:''
     );
    
-    if(setActive === "active") {setIconState(false) ;setTitle('More Details')} else {setIconState(true);setTitle('Hide Details')}
+    if(setActive === "active") {setIconState(true) ;setTitle('More Details')} else {setIconState(false);setTitle('Hide Details')}
     setRotateState(
       setActive === "active" ? "accordion__icon" : "accordion__icon rotate"
     );
   }
     return (
       <>
-        <div className="accordion__section">
+      <div className="accordion__section">
       <div className='accordion' onClick={toggleAccordion}>
         <span className="accordion__title">{title}</span>
-        {/* <Image path={Hide} imageStyle={HideImage}/> */}
-        {iconState? <Image path={More} imageStyle={MoreImage}/> :null}
-        {!iconState? <Image path={Hide} imageStyle={HideImage}/> :null}
+        {iconState? <Image path={More} imageStyle={MoreImage}/>:null}
+        {!iconState? <Image path={Hide} imageStyle={HideImage}/>:null}
       </div>
       <div ref={content} style={{ maxHeight: `${setHeight}` }} className="accordion__content">
         <div
@@ -45,8 +41,7 @@ const Accordion = ({contents }: Props): JSX.Element => {
           dangerouslySetInnerHTML={{ __html: contents }}
         />
       </div>
-    </div>
-    
+    </div>  
       </>
     );
   };

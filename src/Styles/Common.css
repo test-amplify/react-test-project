@@ -1,6 +1,7 @@
 .commonImgStyle{
-
+  float: left
 }
+.menu { display: flex; justify-content: space-between; }
 
 
   .mainHeading p {
@@ -80,17 +81,17 @@
     font-family:'Nunito';
     font-size: 15px;
     margin-left: 12px;
-    margin-top: 24px;
+    margin-top: 20px;
     font-weight: bold;
-    height: 10px;
+    height: 20px;
   }
   .userLoc{
     color: #8492A6;
     font-family:'Nunito';
     font-size: 13px;
     margin-left: 12px;
-    margin-bottom: 24px;
-    height: 10px;
+    margin-bottom: 2px;
+    height: 18px;
   }
   .specification{
     font-size: 15px;
@@ -105,16 +106,17 @@
     font-weight: bold;
     font-family:'Nunito';
     margin-left: 13.23px;
-    margin-top: 13px;
+    margin-top: 11px;
     color: #0A2239;
   }
   .specification03{
     font-size: 15px;
     font-weight: bold;
     font-family:'Nunito';
-    margin-left: 19.59px;
-    margin-top: 10px;
+    margin-left: 18px;
+    margin-top: 11px;
     color: #0A2239;
+    margin-bottom: 19px;
   }
 
   .mainSecCardHeading p {
@@ -138,13 +140,13 @@
     transform: translate(-50%);
   }
   .bid-input{
-    max-width: 100%;
+    /* max-width: 100%; */
    height:69px;
    border: none; 
    font-size: 50px;
    color: #0D2D11;
    align-content: center;
-   width: fit-content;
+ 
    outline: none;
   }
   .PriceTxtNew{
@@ -328,10 +330,7 @@ top:-10px
 content: ':';
   }
 
-  .container{
-    max-width: 700px;
   
-  }
   .formfield{
     position: relative;
     box-sizing: border-box;
@@ -344,18 +343,22 @@ content: ':';
   .formfield *{
     box-sizing: border-box;
   }
-  
+  .FormGroup{
+    margin-left: 0px;
+    margin-right: 43px;
+  }
   #mobilefield{
-    width: 86%;   
-    margin-right: 40px;
+    width: 100%;   
+    /* margin-right: 40px; */
+    
   }
   #namefield{
-    width: 86%;   
-    margin-right: 40px;
+    width: 100%;   
+    /* margin-right: 40px; */
   }
   #remarksfield{
-    width: 86%;   
-    margin-right: 40px;
+    width: 100%;   
+    /* margin-right: 40px; */
   }
   .formfield>input, .formfield>label{
     padding: 0.8em;
@@ -365,6 +368,7 @@ content: ':';
     margin-left: 20px;
     font-size: 14px;
     font-family: 'Nunito';
+    transition: max-height 0.6s ease;
   }
   
   .formfield>input{
@@ -379,7 +383,8 @@ content: ':';
     border-radius: 1px;
     outline: none;
     border-radius: 4px;
-    height:44px
+    height:44px;
+    transition: max-height 0.6s ease;
   }
 
   .formfield>label{
@@ -402,5 +407,26 @@ content: ':';
     top: 0em;
     left: 2em;
   }
-  
-  
+
+ 
+   .editobleTxt {
+    display: inline-block;
+    border: none;
+    height: 50px;         
+    color: black;
+    font-size: 40px;
+    font-style: normal;
+    outline: none;
+    margin-top: 3px;
+    margin-right: 17px;
+   }
+
+ 
+  [contentEditable][placeholder]:empty:before {
+    content: attr(placeholder);
+    position: absolute;
+    color: #0D2D11;
+    font-family: 'Nunito';
+    font-style: normal;
+    opacity: 12%;
+  }
